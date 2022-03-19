@@ -1,14 +1,21 @@
+<!doctype html>
+<html lang="en">
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Notebooks</h1>
-
-<div id="notebooks">
-  <% @notebooks.each do |notebook| %>
-    <%= render notebook %>
-    <p>
-      <%= link_to "Show this notebook", notebook %>
-    </p>
-  <% end %>
+<div class="header">
+  <a class="logo"><h2>Notebooks</h2></a>
 </div>
 
-<%= link_to "New notebook", new_notebook_path %>
+<div class="bottom_new" ><%= link_to "New notebook", new_notebook_path %></div>
+
+  <div id="notebooks">
+    <% @notebooks.each do |notebook| %>
+
+      <div class="item" >
+        <%= render notebook %>
+        <p><%= link_to "Show this notebook", notebook %></p>
+      </div>
+    <% end %>
+  </div>
+</html>
