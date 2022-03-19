@@ -1,10 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<!doctype html>
+<html lang="en">
 
-<%= render @notebook %>
-
-<div>
-  <%= link_to "Edit this notebook", edit_notebook_path(@notebook) %> |
-  <%= link_to "Back to notebooks", notebooks_path %>
-
-  <%= button_to "Destroy this notebook", @notebook, method: :delete %>
+<div class="header">
+  <a class="logo"><h2>Notebooks</h2></a>
 </div>
+
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @notebook %>
+
+  <div>
+    <%= link_to "Edit this notebook", edit_notebook_path(@notebook) %> |
+    <%= link_to "Back to notebooks", notebooks_path %>
+
+    <%= button_to "Destroy this notebook", @notebook, method: :delete %>
+  </div>
+</html>
